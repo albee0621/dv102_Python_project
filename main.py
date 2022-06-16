@@ -13,7 +13,7 @@ from sqlalchemy.types import VARCHAR, Float, Integer,Date,TEXT
 
 all_list = ["王品牛排","石二鍋","夏慕尼","陶板屋","原燒","瓦城","時時香","非常泰","1010湘","大心"]
 
-#"陶板屋","原燒","瓦城","時時香","非常泰","1010湘","大心"
+
 # dirverPath = 'D:/chromedriver'
 
 for key in all_list:
