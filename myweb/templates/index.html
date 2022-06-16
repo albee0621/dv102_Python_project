@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!--
+Template Name: Foxclore
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>Python餐飲趨勢分析</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{{ url_for('static', filename='css/layout.css') }} " rel="stylesheet" type="text/css" media="all">
+<!-- <link href="{{ url_for('static', filename='css/tabs.css') }} " rel="stylesheet" type="text/css"> -->
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script type='text/javascript' src='https://prod-apnortheast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
+<!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
+
+
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image: url('static/images/demo/backgrounds/rest.jfif');"> 
+  <!-- ################################################################################################ -->
+
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="navwrapper" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <nav id="mainav">
+      <ul class="clear">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#intro">專題介紹</a></li>
+        <li><a href="https://public.tableau.com/app/profile/sherlin4634/viz/v4_16551000067390/Dcard" target="_blank">資料分析結果</a></li>
+        <li><a class="drop" href="#">程式碼</a>
+          <ul>
+            <li><a href="https://github.com/rickhsu1999/dv102_Python_project" target="_blank">Rick</a></li>
+            <li><a href="https://github.com/Sherlin1996/dv102_Python_project" target="_blank">Sherlin</a></li>
+            <li><a href="https://github.com/albee0621/dv102_Python_project" target="_blank">Albee</a></li>
+            <li><a href="https://github.com/KuanTing0612/-dv102_Python_project" target="_blank">Jimmy</a></li>
+          </ul>
+        </li>
+        <li><a class="drop" href="#">參考資料</a>
+          <ul>
+            <li><a href="https://selenium-python.readthedocs.io/" target="_blank">Selenium</a></li>
+            <li><a href="https://pandas.pydata.org/" target="_blank">Pandas</a></li>
+            <li><a href="https://numpy.org/" target="_blank">Numpy</a></li>
+            <li><a href="https://matplotlib.org/" target="_blank">matplotlib</a></li>
+            <li><a href="https://flask.palletsprojects.com/en/2.1.x/" target="_blank">Flask</a></li>
+            <li><a href="https://www.w3schools.com/python/default.asp" target="_blank">W3school</a></li>
+          </ul>
+        </li>
+        <li><a href="https://drive.google.com/drive/u/0/folders/1d4hDUqQcCtTTgdzb4eQQEH0f9mZJnJbb" target="_blank">google雲端硬碟</a>
+        </li>
+        <li><a href="#testimonials">關於我們</a></li>        
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+    <div id="searchform">
+      <div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Quick Search:</legend>
+            <input type="text" placeholder="Enter search term&hellip;">
+            <button type="submit"><i class="fas fa-search"></i></button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <!-- ################################################################################################ -->
+  </section>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div id="pageintro" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <article>
+      <p>DV102 AI大數據分析</p>
+      <h3 class="heading">Python餐飲趨勢分析</h3>
+      <p>因應市場需求，針對王品集團、瓦城泰統，兩大集團的分析</p>
+      <footer><button  class="btn" href="#" onclick="show('popup')">加入好友</a></footer>
+        <div class="popup" id="popup">
+          <img src="{{ url_for('static', filename='images/demo/linebot.PNG') }} "><br>
+          <a href="#" onclick="hide('popup')" >Close</a>
+        </div>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id='intro'class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <ul class="nospace group">
+        <li class="one_third">
+          <figure><a class="imgover" href="#one"><img class ="cards" src="{{ url_for('static', filename='images/demo/card/steak.jpg') }} " alt=""></a>
+            <figcaption>
+              <h6 class="heading">主題介紹</h6>
+              <p class="cont">基於餐飲集團的市場需求，藉由各媒體與網站內龐大的資訊量，透過爬蟲技術獲取資訊並且進行分析</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="#two"><img class ="cards" src="{{ url_for('static', filename='images/demo/card/duck.jpg') }} " alt=""></a>
+            <figcaption>
+              <h6 class="heading">任務分工</h6>
+              <p class="cont">團隊合作必續進行不同的技術分工，包含資料蒐集、資料清理、資料分析、分析結果視覺化呈現，以及API製作</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="#three"><img class ="cards" src="{{ url_for('static', filename='images/demo/card/cake.jpg') }} " alt=""></a>
+            <figcaption>
+              <h6 class="heading">工作時程</h6>
+              <p class="cont">藉由紀錄各項分工的工作時程，達到專案在有限的時間之內，獲得最大的收穫</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="#four"><img class ="cards" src="{{ url_for('static', filename='images/demo/card/soup.jpg') }} " alt=""></a>
+            <figcaption>
+              <h6 class="heading">資料源介紹、資料蒐集規劃</h6>
+              <p class="cont">網路媒體、社群網站、平台的評價以及評論，藉由大量的資料蒐集與分析，達到看出市場的需求的結果</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="#five"><img class ="cards" src="{{ url_for('static', filename='images/demo/card/shun.jpg') }} " alt=""></a>
+            <figcaption>
+              <h6 class="heading">分析結果說明</h6>
+              <p class="cont">使用python做出的分析結果，利用各個視覺化平台，以別於傳統文字形呈現的圖表呈現</p>
+            </figcaption>
+          </figure>
+        </li>
+        <li class="one_third">
+          <figure><a class="imgover" href="#six"><img class ="cards" src="{{ url_for('static', filename='images/demo/card/pork.jpg') }} " alt=""></a>
+            <figcaption>
+              <h6 class="heading">碰到困難與如何解決</h6>
+              <p class="cont">專案進行必然會碰到許多難題，可能不僅是技術上的問題，還可能包含時間分配以及其他分析方向的問題</p>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id='one' class="wrapper row2" style="background-image:url('static/images/demo/topic_intro/rest.jpg');background-size:100% 100%">
+  <!-- <section class="hoc container clear">  -->
+  <div class="hoc container_topic clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle2"><!--調整主題介紹到sectiontitle-->
+      <!-- <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p> -->
+
+      <div class="top_right">
+      <h6 class="heading topicsize">主題介紹</h6>
+      <div class='contentsize2'>
+      <br>
+      <ul>
+      <li>王品集團</li>
+      <p>牛排料理-王品牛排</p>
+      <p>鐵板燒-夏慕尼
+      <p>日式套餐-陶板屋
+      <p>鍋物-石二鍋
+      <p>燒肉-原燒</p><br>
+      <li>瓦城集團</li>
+      <p>泰式料理-瓦城、非常泰、大心
+      <p>湘菜-1010湘
+      <P>中式料理-時時香</p><br>
+      <li>分析內容</li>
+      <p>分析王品集團與瓦城集團的聲量以及評價</p>
+      </ul>
+      <br>
+      </div>
+      </div>
+      <p class="topic_left">
+        <img src="{{ url_for('static', filename='images/demo/topic_intro/wa.png') }} ">
+        <img src="{{ url_for('static', filename='images/demo/topic_intro/王品.jfif') }} "><br>
+      </p>
+      <p class="topic_back">
+      <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a>
+      </p>
+    </div>
+
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+</hr>
+<div id='two'class="wrapper row6" >
+  <!-- <section class="hoc container clear">  -->
+  <div class="hoc container_topic clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle"><!--調整主題介紹到sectiontitle-->
+      <!-- <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p> -->
+      <div class="topic_left">
+      <h6 class="heading topicsize">任務分工</h6>
+      <ul class='contentsize'>
+        <br>
+        <li>資料收集</li>
+        <p>GoogleMap、Dcard、ETTODAY、PTT</p>
+        <br>
+        <li>資料清理</li>
+        <p>清理無用值、貼圖、空值，並且新增ID欄位，例如：餐廳名稱，資料來源</p>
+        <br>
+        <li>資料分析</li>
+        <p>將時間改成標準timestamp形式，以月份與季節為單位，分析各月份及各季節的總聲量</p>
+        <br>
+        <li>資料視覺化呈現</li>
+        <p>使用Tableau、Qlick平台，以及Python matplotlib模組</p>
+        <br>
+        <li>資料庫工程</li>
+        <p>利用PyMySQL模組或者pandas tosql函式將整理好的dataframe匯入MySQL</p>
+        <br>
+        <li>雲端aws架設</li>
+        <p>使用AWS雲端平台建置EC2，將MySQL server架設在EC2，並且用Flask連結到EC2的Localhost</p>
+        <br>
+        <li>串接API</li>
+        <p>使用Python Flask模組將網頁前端的POST載回Python並連接資料庫，接著用route的方式把Python運算結果傳回前端</p>
+        <br>
+      </ul>
+      <p class="topic_back">
+        <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ################################## -->
+<div id='three'class="wrapper row7">
+  <!-- <section class="hoc container clear">  -->
+  <div class="hoc container_topic clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle"><!--調整主題介紹到sectiontitle-->
+      <!-- <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p> -->
+      <div class="topic_left">
+      <h6 class="heading topicsize">工作時程</h6>
+      <ul class='contentsize' >
+        <br>
+        <li>第一周</li>
+        <p>定義收集內容，並進行資料源數據收集</p>
+        <br>
+        <li>第二周</li>
+        <p>定義資料處理格式、資料分析方法，並進行資料清洗</p>
+        <br>
+        <li>第三周</li>
+        <p>進行資料處理、資料分析</p>
+        <br>
+        <li>第四周</li>
+        <p>雲端資料庫架設並將資料處理結果匯入資料庫</p>
+        <br>
+        <li>第五周</li>
+        <p>flask網頁架設、雲端無伺服器服務架設、製作dashboard</p>
+        <br>
+        <li>第六周</li>
+        <p>製作linebot、架設爬蟲機</p>
+        <br>
+        <li>第七周</li>
+        <p>製作簡報，細節調整</p>
+        <br>
+      </ul>
+      <img class="test" src="{{ url_for('static', filename='images/demo/mission_intro/card.png') }}" style="width:50%;display: block;float: right;top:50px" >
+      <br>
+      </div>
+      <p class="topic_back">
+        <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- ######################################################### -->
+<div id='four'class="wrapper row7" style="background-image:url('static/images/demo/topic_intro/source_intro.jpg');background-size: cover;">
+  <!-- <section class="hoc container clear">  -->
+  <div class="hoc container_topic clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle"><!--調整主題介紹到sectiontitle-->
+      <!-- <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p> -->
+      <div class="topic_left">
+      <h6 class="heading topicsize">資料源介紹</h6>
+      <ul class='contentsize'>
+        <br>
+        <li><a href="https://www.google.com.tw/maps?hl=zh-TW&tab=rl&authuser=0" target="_blank">Googlemap</a></li>
+        <p>Googlemap 是現代人常拿來做為美食地圖的好工具，上面<br>
+          的評論往往能夠反映出餐廳最真實的樣貌，當然在分析資料<br>
+          時，我們也會將評論區裡面無用的資料刪除，例如沒有評價<br>
+          只有給星星的留言，以及明顯是洗評價的留言，以增加資料<br>
+          的準確性以及可用性。
+        </p>
+        <br>
+        <li><a href="https://www.dcard.tw/f" target="_blank">Dcard</a></li>
+        <p>是台灣的社群網路服務網站，開放給臺灣與國外部分大學學<br>
+          生註冊，上面的很多文章很多都是徵集網友的意見，尤其是<br>
+          Dcard的網站設計，將許多不同的討論主題分類分的鉅細靡<br>
+          ，使用上面的美食版來尋找餐廳的聲量，是非常適合的資料<br>
+          來源，在很多新創討論網站中，它儼然已經佔有一席之地
+        </p>
+        <br>
+        <li><a href="https://www.ptt.cc/bbs/index.html" target="_blank">PTT</a></li>
+        <p>PTT是以提供個人板以及團體等私人性質為主的看板服務，<br>
+          從1995年就已經被創立，其中經歷許多改革卻仍歷久不衰，<br>
+          許多網友在蒐集資訊方面皆會在此看板上面發問以尋求解答<br>
+          對於餐廳意見的蒐集，雖然資料並非非常新或完整，但在許<br>
+          多網友眼裡，仍然是參考價值極高的一個網站。</p>
+        <br>
+        <li><a href="https://www.ettoday.net/" target="_blank">ETTODAY</a></li>
+        <p>東森新聞雲是整合新聞、資訊、知識和娛樂的訊息大平台，<br>
+           ，在眾多新聞媒體之中，它的立場非常中立，在娛樂新聞方<br>
+           面也表現亮眼，許多廠商皆會在他們的網站上下非常多廣告<br>
+           將其發布新聞的數量當成聲量統計的來源，是個不錯的選擇
+        </p>
+        <br>
+      </ul><br>
+      <p class="topic_back">
+        <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a>
+      <!--action={{ url_for('Home') }}-->
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id='five'class="wrapper row7" style="background-color:rgb(229, 229, 229)" ;>
+  <!-- <section class="hoc container clear">  -->
+  <div class="hoc container_topic clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle"><!--調整主題介紹到sectiontitle-->
+      <div class="topic_left">
+      <h6 class="heading topicsize">分析結果說明</h6>
+      <ul class='contentsize'>
+        <li>王品集團</li>
+        <p>服務-正面評價多次提及服務，代表消費者在餐廳用餐時很重視服務態度<span style="opacity:0;">opcityoooooooooooooooooooooooooooooooo</span></p>
+        <p>環境-留言提及氣氛、環境、伴侶次數較高，推測店內環境好可被列入適合約會餐廳</p><br>
+        <li>瓦城集團</li>
+        <p>服務-服務提及次數沒有特別多，表示相較於服務，消費者更注重其他重點</p>
+        <p>環境-留言提及冰淇淋、自助吧，推測消費者會因有自助吧而到餐廳消費</p><br>
+        <li>王品v.s瓦城-</li>
+        <p>外送服務-外帶、外送，提及次數高，推測因近兩年受疫情影響，消費者對於這項服務需求提高</p>
+        <p>王品正面聲量-服務好、用餐環境佳、好吃、慶生活動多</p>
+        <p>王品負面聲量-難定位、候位較久</p>
+        <p>瓦城正面聲量-食物、食材、口味佳</p>
+        <p>瓦城負面聲量-口味太重、難定位</p>
+        <br>
+      </ul>
+      
+      <br>
+      <div class='tableauPlaceholder' id='viz1655100118948' style='position: relative'>
+        <noscript>
+        <a href='#'>
+        <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;v4&#47;v4_16551000067390&#47;Dcard&#47;1_rss.png' style='border: none' />
+        </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='v4_16551000067390&#47;Dcard' />
+        <param name='tabs' value='yes' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;v4&#47;v4_16551000067390&#47;Dcard&#47;1.png' /> 
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='zh-TW' />
+        </object>
+        </div>                
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1655100118948');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) 
+        { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else if ( divElement.offsetWidth > 500 ) 
+        { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='1150px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+        
+      <p class="topic_back">
+        <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a>
+      </p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div id='six'class="wrapper row7" style="background-image:url('static/images/demo/topic_intro/background2.jpg');background-size: 50% 100%;">
+  <!-- <section class="hoc container clear">  -->
+  <div class="hoc container_topic clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle"><!--調整主題介紹到sectiontitle-->
+      <!-- <p class="nospace font-xs">Mollis eu commodo eu dui quisque</p> -->
+      <div class="topic_left">
+      <h6 class="heading topicsize">碰到困難與如何解決</h6>
+      <ul class='contentsize'>
+        <br>
+        <li>資料源收集問題</li>
+        <p>資料源的收集會有 資料太舊，資料量不夠，資訊太雜(圖文不符)、洗評論的問題。<br>
+        PTT、Dcard兩大論壇的美食版，可以先篩選掉不符合的文章，googlemap評論最直接也最貼近餐廳，<br>
+        但會有餐廳辦活動促銷的評論收集時透過程式碼先拿掉，ettoday許多企業皆會在他們的網站上下廣告，將其發布新聞的數量當成聲量統計的來源。</p>
+        <br>
+        <li>資料清洗-表情符號</li>
+        <p>googlemap 、Dcard會有表情符號問題，須清洗後再放進資料庫，我們用python emoji、re模組 清洗。</p>
+        <br>
+        <li>資料格式-不一致 </li>
+        <p>每個網站抓下來的呈現方式都不同我們需要整理成一致的格式再放進資料庫，舉例:PTT : Thu Jun  2 18:07:01 2022，<br>
+        Dcard:美食 6月2日 14:38 (今年的文章就不會有年份)，可用 re找到數字、split將數字切開取需要的值、join合併一起、calendar模組 將月份轉換成需要的形式。</p>
+        <br>
+        <p class="topic_back">
+          <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a>
+        </p>
+      </ul>
+      <!-- <p class="topic_back">
+        <img class='gant'src="{{ url_for('static', filename='images/demo/mission_intro/0530.png') }} "><br>
+        <a id="btop" href="#intro"><i class="fas fa-chevron-up"></i></a> -->
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper coloured">
+  <section id="testimonials" class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <p class="nospace font-xs">DV102 AI大數據</p>
+      <h6 class="heading2">Team Member</h6>
+    </div>
+    <article class="one_half first"><img src="{{ url_for('static', filename='images/demo/selfie/Rick.jpg') }} " alt="" style="width:100px;height:100px;">
+      <blockquote>甚麼都會甚麼都不奇怪，除了是selenium大師之外，AWS、MySQL樣樣都精通，唯一的缺點就是長得太帥，眾多優點之一就是缺點只有一個</blockquote>
+      <h6 class="heading">Rick</h6>
+      <em>爬蟲大神</em></article>
+    <article class="one_half"><img src="{{ url_for('static', filename='images/demo/selfie/Sherline.jpg') }} " alt="" style="width:100px;height:100px;">
+      <blockquote>Pandas、Numpy、emoji，每樣模組都用得淋漓盡致，資料清洗的去蕪存菁比家裡廁所地板乾淨。</blockquote>
+      <h6 class="heading">Sherlin</h6>
+      <em>資料處理女神</em></article>
+    <article class="one_half first"><img src="{{ url_for('static', filename='images/demo/selfie/Albee.jpg') }} " alt="" style="width:100px;height:100px;">
+      <blockquote>Tableau、Qlik、PowerBI、Oracle每樣資料視覺化平台都瞭若指掌，平均拉一張圖只需要一根手指頭，只有你沒想到的圖，沒有畫不出來的圖</blockquote>
+      <h6 class="heading">Albee</h6>
+      <em>視覺化女神</em></article>
+    <article class="one_half"><img src="{{ url_for('static', filename='images/demo/selfie/Jimmy.jpg') }} " alt="" style="width:100px;height:100px;">
+      <blockquote>抱大腿大神，專長複製貼上，名言:萬事起頭難，只要會複製。只要鍵盤有CTRL、C、V，甚麼程式碼都會寫，</blockquote>
+      <h6 class="heading">Jimmy</h6>
+      <em>抱大腿的</em></article>
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/google.css') }} " rel="stylesheet">
+<script src="{{ url_for('static', filename='scripts/googlemap1.js') }} "></script>
+<div id="map-container">
+  <div id="locations-panel">
+    <div id="locations-panel-list">
+      <header>
+        <h1 class="search-title">
+          <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
+          Find a location near you
+        </h1>
+        <div class="search-input">
+          <input id="location-search-input" placeholder="Enter your address or zip code">
+          <div id="search-overlay-search" class="search-input-overlay search">
+            <button id="location-search-button">
+              <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="Search"/>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="section-name" id="location-results-section-name">
+        All locations
+      </div>
+      <div class="results">
+        <ul id="location-results-list"></ul>
+      </div>
+    </div>
+  </div>
+  <div id="gmp-map"></div>
+</div>
+<script id="locator-result-items-tmpl" type="text/x-handlebars-template" >
+  {% raw %}
+  {{#each each_locations }}
+    <li class="location-result" data-location-index="{{index}}">
+      <button class="select-location">
+        <h2 class="name">{{title}}</h2>
+      </button>
+      <div class="address">{{address1}}<br>{{ address2 }}</div>
+    </li>
+  {{/each}}
+  {% endraw %}
+</script>
+
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+
+  <div id="copyright2" class="hoc clear">
+    <form class='formsize'name="" action=""></form>
+      <p class="fl_left">TEL-0900-000-123</br>Email-RiALSHJI@gmail.com</br>
+      <textarea name="comment" cols="20" rows="4">Enter your comments       we won't reply...</textarea>
+      </p>
+    </form>
+
+    <p class="fl_right2">
+      <a target="_blank" href="https://www.dcard.tw/f"  target="_blank">Dcard</a><br>
+      <a target="_blank" href="https://www.ptt.cc/bbs/index.html"  target="_blank">PTT</a><br>
+      <a target="_blank" href="https://www.google.com.tw/maps?hl=zh-TW&tab=rl&authuser=0" target="_blank">googlemap</a><br>
+      <a target="_blank" href="https://www.ettoday.net/" target="_blank">ETTODAY</a><br>
+      <a target="_blank" href="https://data.gov.tw/" target="_blank">政府公開平台</a><br>
+      <a target="_blank" href="https://dv102.ntc.im/" target="_blank">DV102AI大數據</a><br>
+    </p>
+  </div>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2022 - <a href="#">DV102</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{{ url_for('static', filename='scripts/jquery.min.js') }} "></script>
+<script src="{{ url_for('static', filename='scripts/jquery.backtotop.js') }} "></script>
+<script src="{{ url_for('static', filename='scripts/jquery.mobilemenu.js') }} "></script>
+<script src="{{ url_for('static', filename='scripts/jquery-1.11.0.min.js.js') }} "></script>
+<!-- <script src="{{ url_for('static', filename='scripts/tabs.js') }} "></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfQwB_YpxBAfnpkRhIPvrRd4gHEA5Xa8&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cA" async defer></script>
+</body>
+</html>

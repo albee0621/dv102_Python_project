@@ -1,0 +1,10 @@
+Flask==2.0.3
+flask-apispec==0.11.0
+flask-googlemaps==0.4.1
+Flask-JWT-Extended==4.3.1
+Flask-RESTful==0.3.9
+line-bot-sdk==2.2.1
+requests
+python-dateutil==2.8.2
+PyMySQL==1.0.2
+pandas==1.4.2

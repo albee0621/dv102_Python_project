@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/30549ead-d9f0-4bc0-a09b-a432eeebd8e4/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/dv102foodofficial",
+    "appService.deploySubpath": "."
+}
